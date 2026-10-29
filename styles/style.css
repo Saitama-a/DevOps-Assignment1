@@ -1,3 +1,395 @@
+
+/* =========================================
+   CAMPUS BITES — HOW TO ORDER PAGE
+   Modern, responsive cafeteria design
+   ========================================= */
+
+:root {
+    --cb-primary: #e76f24;
+    --cb-primary-dark: #b94b13;
+    --cb-cream: #fff8f0;
+    --cb-surface: #ffffff;
+    --cb-text: #302820;
+    --cb-muted: #766b61;
+    --cb-border: #f0dfd0;
+    --cb-shadow: 0 12px 35px rgba(83, 48, 23, 0.09);
+}
+
+/* General page styling */
+body {
+    margin: 0;
+    color: var(--cb-text);
+    background: var(--cb-cream);
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+body a {
+    color: var(--cb-primary-dark);
+    transition: color 0.2s ease;
+}
+
+body a:hover {
+    color: var(--cb-primary);
+}
+
+body a:focus-visible {
+    outline: 3px solid var(--cb-primary);
+    outline-offset: 4px;
+}
+
+/* Header and navigation */
+.site-header {
+    position: relative;
+    overflow: hidden;
+    padding: 36px 20px 28px;
+    text-align: center;
+    color: #ffffff;
+    background: linear-gradient(135deg, #713719, #bd551c 60%, #ed8a38);
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.site-header > p {
+    margin: 4px 0 24px;
+    color: #fff0e4;
+    font-size: 1.05rem;
+}
+
+.site-header nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.site-header nav a {
+    padding: 9px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+    color: #713719;
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Main content container */
+.container {
+    width: min(100% - 40px, 1050px);
+    margin: 0 auto;
+    padding: 45px 0 65px;
+}
+
+/* Intro section */
+.page-intro {
+    position: relative;
+    margin-bottom: 42px;
+    padding: 42px 30px;
+    overflow: hidden;
+    border: 1px solid var(--cb-border);
+    border-radius: 24px;
+    background: linear-gradient(120deg, #ffffff, #fff0df);
+    box-shadow: var(--cb-shadow);
+}
+
+.page-intro::after {
+    content: "🍽️";
+    position: absolute;
+    right: 30px;
+    bottom: 5px;
+    font-size: clamp(4rem, 10vw, 7rem);
+    opacity: 0.13;
+    pointer-events: none;
+}
+
+.page-intro h2 {
+    max-width: 650px;
+    margin: 0 0 12px;
+    color: #733c1d;
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.page-intro p {
+    max-width: 650px;
+    margin: 0;
+    color: var(--cb-muted);
+    font-size: 1.08rem;
+}
+
+/* Section headings */
+.order-steps > h2,
+.order-guidelines h2,
+.order-help h2 {
+    margin: 0 0 22px;
+    color: #733c1d;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    letter-spacing: -0.5px;
+}
+
+/* Ordering step cards */
+.order-steps {
+    margin: 0 0 42px;
+}
+
+.order-card {
+    position: relative;
+    margin-bottom: 18px;
+    padding: 25px 28px 25px 88px;
+    border: 1px solid var(--cb-border);
+    border-left: 5px solid var(--cb-primary);
+    border-radius: 16px;
+    background: var(--cb-surface);
+    box-shadow: 0 5px 18px rgba(83, 48, 23, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.order-card::before {
+    position: absolute;
+    top: 24px;
+    left: 23px;
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    border-radius: 14px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ed8a38, #c65319);
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.order-card:nth-of-type(1)::before {
+    content: "01";
+}
+
+.order-card:nth-of-type(2)::before {
+    content: "02";
+}
+
+.order-card:nth-of-type(3)::before {
+    content: "03";
+}
+
+.order-card:nth-of-type(4)::before {
+    content: "04";
+}
+
+.order-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--cb-shadow);
+}
+
+.order-card h3 {
+    margin: 0 0 8px;
+    color: #713719;
+    font-size: 1.2rem;
+}
+
+.order-card p {
+    margin: 0;
+    color: var(--cb-muted);
+}
+
+.order-card a {
+    font-weight: 600;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+/* Ordering guidelines */
+.order-guidelines {
+    margin: 0 0 30px;
+    padding: 30px;
+    border: 1px solid #f2d6b6;
+    border-radius: 20px;
+    background: #fff0dc;
+}
+
+.order-guidelines ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.order-guidelines li {
+    padding: 15px 16px;
+    border: 1px solid #f3dfc8;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    color: var(--cb-muted);
+}
+
+.order-guidelines li strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #713719;
+}
+
+/* Call-to-action */
+.order-help {
+    padding: 35px 25px;
+    border-radius: 20px;
+    color: #ffffff;
+    background: linear-gradient(120deg, #733719, #c45a20);
+    text-align: center;
+    box-shadow: var(--cb-shadow);
+}
+
+.order-help h2 {
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.order-help p {
+    margin: 0 0 22px;
+    color: #ffead9;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 13px 25px;
+    border: 2px solid #ffffff;
+    border-radius: 30px;
+    color: #713719;
+    background: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button-link:hover {
+    color: #713719;
+    background: #ffe8d2;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.site-footer {
+    padding: 22px 20px;
+    color: #f9e6d6;
+    background: #39251a;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Tablet and mobile responsiveness */
+@media (max-width: 700px) {
+    .container {
+        width: min(100% - 28px, 1050px);
+        padding: 28px 0 40px;
+    }
+
+    .site-header {
+        padding: 28px 14px 22px;
+    }
+
+    .site-header nav {
+        gap: 7px;
+    }
+
+    .site-header nav a {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+
+    .page-intro {
+        padding: 30px 22px;
+        margin-bottom: 30px;
+    }
+
+    .page-intro::after {
+        right: 12px;
+        bottom: 0;
+        font-size: 4rem;
+    }
+
+    .order-card {
+        padding: 22px 18px 22px 72px;
+    }
+
+    .order-card::before {
+        top: 22px;
+        left: 15px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .order-guidelines {
+        padding: 22px 18px;
+    }
+
+    .order-guidelines ul {
+        grid-template-columns: 1fr;
+    }
+
+    .order-help {
+        padding: 28px 18px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 400px) {
+    .site-header nav a {
+        padding: 7px 10px;
+        font-size: 0.8rem;
+    }
+
+    .order-card {
+        padding: 70px 17px 20px;
+    }
+
+    .order-card::before {
+        top: 15px;
+        left: 17px;
+    }
+
+    .page-intro h2 {
+        font-size: 1.8rem;
+    }
+
+    .button-link {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .order-card,
+    .site-header nav a,
+    .button-link {
+        transition: none;
+    }
+
+    .order-card:hover,
+    .site-header nav a:hover,
+    .button-link:hover {
+        transform: none;
+    }
 /* Base Styles & Reset */
 * {
     margin: 0;

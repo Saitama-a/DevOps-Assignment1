@@ -1,0 +1,59 @@
+
+/* How to Order page */
+
+.order-steps {
+    margin: 2rem 0;
+}
+
+.order-card {
+    background-color: #ffffff;
+    border-left: 5px solid #e67e22;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.order-card h3 {
+    color: #8b4513;
+    margin-top: 0;
+}
+
+.order-guidelines,
+.order-help {
+    background-color: #fff7ed;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.order-guidelines li {
+    margin-bottom: 0.75rem;
+}
+
+.button-link {
+    display: inline-block;
+    background-color: #8b4513;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+}
+
+.button-link:hover {
+    background-color: #63300d;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .order-card,
+    .order-guidelines,
+    .order-help {
+        padding: 1rem;
+    }
+
+    .button-link {
+        display: block;
+        text-align: center;
+    }
+}

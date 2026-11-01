@@ -1,0 +1,132 @@
+/* ==========================================================
+   Campus Bites - shared stylesheet
+   Each team member adds their page styles in their own
+   section at the bottom. Keep sections separate to make
+   merge conflicts easier to resolve.
+   ========================================================== */
+
+/* ---------- Base (Team Lead) ---------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #2b2b2b;
+  background-color: #faf7f2;
+}
+
+a {
+  color: #1f6f4a;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* ---------- Header and navigation (Team Lead) ---------- */
+.site-header {
+  background-color: #1f6f4a;
+  color: #ffffff;
+  padding: 16px;
+  text-align: center;
+}
+
+.site-title {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.site-nav a {
+  display: inline-block;
+  margin: 4px 8px;
+  padding: 6px 12px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  background-color: #f2b632;
+  color: #2b2b2b;
+}
+
+/* ---------- Footer (Team Lead) ---------- */
+.site-footer {
+  background-color: #2b2b2b;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px;
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* ---------- Home page (Team Lead) ---------- */
+.hero {
+  text-align: center;
+  padding: 32px 0;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.info-grid {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.info-card {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #e3ddd2;
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.info-card h3 {
+  margin-top: 0;
+  color: #1f6f4a;
+}
+
+.explore li {
+  margin-bottom: 8px;
+}
+
+/* ---------- Responsive (Team Lead) ---------- */
+@media (max-width: 600px) {
+  .site-title {
+    font-size: 1.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .info-grid {
+    flex-direction: column;
+  }
+
+  .site-nav a {
+    display: block;
+    margin: 4px 0;
+  }
+}
+
+/* ---------- Menu page (Muhammad Muhtasham) ---------- */
+
+/* ---------- Deals page (Amna Ijaz) ---------- */
+
+/* ---------- Order page (Areeba Irfan) ---------- */
+
+/* ---------- Feedback page (Tehreem) ---------- */
